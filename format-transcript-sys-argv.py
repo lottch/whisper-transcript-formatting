@@ -2,28 +2,21 @@ import json
 import os
 import sys
 
-"""[script title]
+"""Whisper formatting from JSON to txt
 
-[script abstract]
-
-[how to use]
-
-this script is currently set up to run the formatting on multiple json files, but can accommodate single use by de-indenting, removing the for loop, assigning json_file instead of json_files, and ensuring source_json constructs based on these variables
+This script takes the JSON output file from Whisper transcription and applies formatting changes according to Russell Library's needs, with the intention of uploading authenticated transcripts to Aviary/OHMS.
+The idea is that captured diarization formatting in the JSON is reflected in hard returns in the txt file and SPEAKER spots that can be substituted for speaker names with find and replace.
 
 
--text editing is separate script
--sys.arg to create paths in terminal
--versions: json interval, json speaker change, vtt timestamps, vtt just diarization
+The script uses a sys argv input, so when run from the terminal, the script looks for a directory to be provided after script, e.g. > python 3 [name of script] [directory]
+The script will run on any JSON files in the directory.
+The standard text edits requested by the Russell Library are found at the end of the script and can be removed if not needed. 
 
-
-
-
-aa
 """
 
 
 #set path to file
-json_folder = sys.argv[1]   #path to json files
+json_folder = sys.argv[1]
 
 #compile a list of files
 json_files = [file for file in os.listdir(json_folder) if file.endswith('.json')]
