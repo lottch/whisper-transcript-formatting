@@ -8,9 +8,10 @@ This script takes the JSON output file from Whisper transcription and applies fo
 The idea is that captured diarization formatting in the JSON is reflected in hard returns in the txt file and SPEAKER spots that can be substituted for speaker names with find and replace.
 
 
-The script uses a sys argv input, so when run from the terminal, the script looks for a directory to be provided after script, e.g. > python 3 [name of script] [target directory]
+The script uses a sys argv input, so when run from the terminal, the script looks for a directory to be provided after script, e.g. > python russell-transcript.py [target directory]
 The script will run on any JSON files in the directory.
 The standard text edits requested by the Russell Library are found at the end of the script and can be removed if not needed. 
+Most notably, in the default settings, the word 'black' is automatically capitalized to address a specific project the script was designed for, but should be removed otherwise (lines 90 and 98)
 
 """
 
@@ -35,7 +36,6 @@ for json_file in json_files:
     tally = 0
     speaker = None
     previous_word = None
-    time_vars = []
 
 #create and insert timestamps, apply formatting/diarization, and populate txt file with formatted transcript
     with open(transcript, "w", encoding='utf-8',errors='ignore') as doc:
