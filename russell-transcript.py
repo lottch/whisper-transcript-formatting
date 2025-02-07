@@ -27,7 +27,7 @@ for json_file in json_files:
 
 #create txt file that will be populated with transcript from json, change "_TS.txt" to your naming convention
     file_name = os.path.splitext(os.path.basename(source_json))[0]
-    transcript = os.path.join(os.path.dirname(source_json), file_name + "_TS-parenthesis.txt")
+    transcript = os.path.join(os.path.dirname(source_json), file_name + "_TS.txt")
     open(transcript, 'w').close()
 
     tally = 0
