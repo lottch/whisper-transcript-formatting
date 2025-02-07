@@ -1,7 +1,3 @@
-import json
-import os
-import sys
-
 """Whisper formatting from JSON to txt
 
 This script takes the JSON output file from Whisper transcription and applies formatting changes according to Russell Library's needs, with the intention of uploading authenticated transcripts to Aviary/OHMS.
@@ -11,10 +7,11 @@ The idea is that captured diarization formatting in the JSON is reflected in har
 The script uses a sys argv input, so when run from the terminal, the script looks for a directory to be provided after script, e.g. > python russell-transcript.py [target directory]
 The script will run on any JSON files in the directory.
 The standard text edits requested by the Russell Library are found at the end of the script and can be removed if not needed. 
-Most notably, in the default settings, the word 'black' is automatically capitalized to address a specific project the script was designed for, but should be removed otherwise (lines 90 and 98)
-
+Most notably, in the default settings, the word 'black' is automatically capitalized to address a specific project the script was designed for, but should be removed otherwise (lines 86 and 94)
 """
-
+import json
+import os
+import sys
 
 #set path to file
 json_folder = sys.argv[1]   #path to json files
