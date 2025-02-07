@@ -4,7 +4,7 @@
 
 The Whisper development server GUI is a pretty straightforward interface, but it's important to use with the appropriate settings.
 <br/>
-![Screenshot 2025-02-06 144129](https://github.com/user-attachments/assets/df624748-4b9e-4a5c-8676-d0b2a6e406f6)
+![Screenshot 2025-02-07 163833](https://github.com/user-attachments/assets/9e5b0b5e-622c-4a7f-b024-b5775280e950)
 <br/>Model: Large V2
 <br/>
 Language: English
